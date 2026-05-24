@@ -206,7 +206,7 @@
       apiUrl: 'https://api.deepseek.com',
       model: 'deepseek-v4-flash',
       systemPrompt: '',
-      temperature: 0.7,
+      temperature: 1,
       thinkingEnabled: true,
       reasoningEffort: 'high'
     });
@@ -370,6 +370,8 @@
     apiKeyInput: $('#apiKeyInput'),
     apiUrlInput: $('#apiUrlInput'),
     systemPromptInput: $('#systemPromptInput'),
+    temperatureInput: $('#temperatureInput'),
+    temperatureValue: $('#temperatureValue'),
     saveSettingsBtn: $('#saveSettingsBtn')
   };
 
@@ -981,8 +983,13 @@
       settings.apiKey = els.apiKeyInput.value.trim();
       settings.apiUrl = els.apiUrlInput.value.trim();
       settings.systemPrompt = els.systemPromptInput.value.trim();
+      settings.temperature = parseFloat(els.temperatureInput.value || 1);
       saveSettings(settings);
       closeSettings();
+    });
+
+    els.temperatureInput?.addEventListener('input', (e) => {
+      els.temperatureValue.textContent = parseFloat(e.target.value).toFixed(1);
     });
 
     els.messageInput.focus();
@@ -993,6 +1000,8 @@
     els.apiKeyInput.value = settings.apiKey || '';
     els.apiUrlInput.value = settings.apiUrl || '';
     els.systemPromptInput.value = settings.systemPrompt || '';
+    els.temperatureInput.value = settings.temperature || 1;
+    els.temperatureValue.textContent = parseFloat(settings.temperature || 1).toFixed(1);
     els.settingsModal.classList.remove('hidden');
   }
 

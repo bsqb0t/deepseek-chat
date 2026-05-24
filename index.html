@@ -112,6 +112,11 @@
           <label for="systemPromptInput">系统提示词（可选）</label>
           <textarea id="systemPromptInput" rows="3" placeholder="你是一个有帮助的助手。"></textarea>
         </div>
+        <div class="form-group">
+          <label for="temperatureInput">采样温度 <span id="temperatureValue">1</span></label>
+          <input type="range" id="temperatureInput" min="0" max="2" step="0.1" value="1">
+          <p class="form-hint">0-2之间，更高的值会使输出更随机，更低的值会使其更加集中。</p>
+        </div>
       </div>
       <div class="modal-footer">
         <button class="btn-primary" id="saveSettingsBtn">保存</button>
