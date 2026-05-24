@@ -988,9 +988,13 @@
       closeSettings();
     });
 
-    els.temperatureInput?.addEventListener('input', (e) => {
-      els.temperatureValue.textContent = parseFloat(e.target.value).toFixed(1);
-    });
+    if (els.temperatureInput) {
+      els.temperatureInput.addEventListener('input', (e) => {
+        if (els.temperatureValue) {
+          els.temperatureValue.textContent = parseFloat(e.target.value).toFixed(1);
+        }
+      });
+    }
 
     els.messageInput.focus();
   }
