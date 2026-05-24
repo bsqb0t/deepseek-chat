@@ -765,9 +765,12 @@
       els.sendBtn.disabled = !els.messageInput.value.trim() && attachments.length === 0;
     }
 
+    // 根据屏幕尺寸调整输入框最大高度
+    const getMaxInputHeight = () => window.innerWidth <= 480 ? 120 : 200;
+
     els.messageInput.addEventListener('input', () => {
       els.messageInput.style.height = 'auto';
-      els.messageInput.style.height = Math.min(els.messageInput.scrollHeight, 200) + 'px';
+      els.messageInput.style.height = Math.min(els.messageInput.scrollHeight, getMaxInputHeight()) + 'px';
       updateSendBtn();
     });
 
