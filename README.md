@@ -2,6 +2,8 @@
 
 一个克隆 DeepSeek 官方聊天界面的纯静态单页应用，支持 DeepSeek API 的大部分功能。
 
+https://bsqb0t.github.io/deepseek-chat/
+
 ## 功能特性
 
 ### 核心功能
