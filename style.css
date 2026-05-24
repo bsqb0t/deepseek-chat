@@ -862,7 +862,7 @@ html, body {
 /* Input wrapper */
 .input-wrapper {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background: var(--bg-input);
   border: 1px solid var(--border);
   border-radius: 16px;
