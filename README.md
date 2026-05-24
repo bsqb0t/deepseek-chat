@@ -20,7 +20,7 @@ https://bsqb0t.github.io/deepseek-chat/
 
 ### API 兼容性
 - **默认端点**: `https://api.deepseek.com`
-- **OpenAI 兼容**: 支持任何 OpenAI 兼容的 `/v1` 格式端点
+- **OpenAI 兼容**: 支持 OpenAI 兼容的 `/v1` 格式端点
 - **DeepSeek 专有参数**: 自动检测 DeepSeek API 并启用 `thinking` 和 `reasoning_effort`
 
 ## 快速开始
