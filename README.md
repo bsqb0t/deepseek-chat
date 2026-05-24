@@ -1,6 +1,6 @@
 # DeepSeek Chat Web Clone
 
-一个克隆 DeepSeek 官方聊天界面的纯静态单页应用，支持 DeepSeek API 的完整功能。
+一个克隆 DeepSeek 官方聊天界面的纯静态单页应用，支持 DeepSeek API 的大部分功能。
 
 ## 功能特性
 
@@ -39,6 +39,8 @@ npx serve .
 
 # 或者使用 PHP
 php -S localhost:8080
+
+或根据下文使用在线部署
 ```
 
 ### 3. 配置 API
@@ -51,11 +53,12 @@ php -S localhost:8080
 
 ```
 deepseek-chat/
-├── index.html      # 页面结构
-├── style.css       # 样式（DeepSeek 风格深色主题）
-├── app.js          # 全部逻辑（IIFE 封装）
-├── CLAUDE.md       # Claude Code 项目文档
-└── README.md       # 本文件
+├──deepseek-api-docs_2026_5_24   # 官方文档(2026/5/24)
+├── index.html                   # 页面结构
+├── style.css                    # 样式（DeepSeek 风格深色主题）
+├── app.js                       # 全部逻辑（IIFE 封装）
+├── CLAUDE.md                    # Claude Code 项目文档
+└── README.md                    # 本文件
 ```
 
 ## 技术栈
@@ -142,10 +145,10 @@ body.thinking = {
 
 详细的 API 文档请参考 `deepseek-api-docs` 目录：
 
-- [对话补全](../deepseek-api-docs/api/create-chat-completion.md) - 核心接口
-- [思考模式](../deepseek-api-docs/guides/thinking_mode.md) - 思考模式使用指南
-- [工具调用](../deepseek-api-docs/guides/tool_calls.md) - Function Calling
-- [多轮对话](../deepseek-api-docs/guides/multi_round_chat.md) - 上下文管理
+- [对话补全](./deepseek-api-docs/api/create-chat-completion.md) - 核心接口
+- [思考模式](./deepseek-api-docs/guides/thinking_mode.md) - 思考模式使用指南
+- [工具调用](./deepseek-api-docs/guides/tool_calls.md) - Function Calling
+- [多轮对话](./deepseek-api-docs/guides/multi_round_chat.md) - 上下文管理
 
 ## 部署
 
